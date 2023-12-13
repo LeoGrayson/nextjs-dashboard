@@ -1,19 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // ... konfigurasi Next.js lainnya, jika ada
-    async headers() {
-      return [
+    images: {
+      remotePatterns: [
         {
-          source: '/custom.html',
-          headers: [
-            {
-              key: 'Content-Type',
-              value: 'text/html',
-            },
-          ],
+          hostname: "images.unsplash.com",
+          protocol: "https",
         },
-      ];
+      ],
     },
   };
-  
-  module.exports = nextConfig;  
+
+  module.exports = nextConfig;
